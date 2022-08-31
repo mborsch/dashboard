@@ -25,7 +25,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize, currentColor } = useStateContext();
+  const { activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked,
+     screenSize, setScreenSize, currentColor } = useStateContext();
 
   useEffect(() => {
       const handleResize = () => setScreenSize(window.innerWidth);
@@ -89,9 +90,13 @@ const Navbar = () => {
         </TooltipComponent>
 
         {isClicked.cart && <Cart />}
+      
         {isClicked.chat && <Chat />}
+    
         {isClicked.notification && <Notification />}
+    
         {isClicked.userProfile && <UserProfile />}
+        
         </div>  
     </div>
   )

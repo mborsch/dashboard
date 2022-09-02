@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import { MdOutlineCancel } from 'react-icons/md';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
@@ -10,11 +10,7 @@ import { Button } from '.';
 
 const Cart = () => {
   const { currentColor } = useStateContext();
-  let navigate = useNavigate();
 
-  function handleClick() {
-      navigate('/ecommerce');
-  }
 
   return (
     <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 ">
@@ -28,7 +24,7 @@ const Cart = () => {
             size="2xl"
             borderRadius="50%"
           />
-          <button onClick={handleClick}>EXIT</button>
+   
         </div>
         {cartData?.map((item, index) => (
           <div key={index}>

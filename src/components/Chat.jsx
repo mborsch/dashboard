@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
-import { useNavigate } from 'react-router-dom';
+
 
 import { Button } from '.';
 import { chatData } from '../data/dummy';
@@ -9,10 +9,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 const Chat = () => {
   const { currentColor } = useStateContext();
 
-  let navigate = useNavigate();
-    function handleClick() {
-      navigate('/ecommerce');
-  }
+
 
   return (
     <div className="nav-item absolute right-5 md:right-52 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
@@ -23,7 +20,7 @@ const Chat = () => {
             5 New
           </button>
         </div>
-        <button onClick={handleClick}>EXIT</button>
+      
         <Button
           icon={<MdOutlineCancel />}
           color="rgb(153, 171, 180)"
